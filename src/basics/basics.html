@@ -9,47 +9,53 @@
 <body>
     <section>
     <h1>Mehrwertsteuer-Rechner</h1>
-    <article class="rechner-area">
+    <article class="rechner-area-one">
+        <div class="auswahl-feld">
         <h2>Was soll berechnet werden?</h2>
             <div>
-                <input type="radio" name="selectMehrwertsteuerAufschlag" id="aufschlagNettoBrutto" checked>
+                <input type="radio" name="checkbox" id="aufschlagNettoBrutto" checked>
                 <label for="aufschlagNettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
 
-                <input type="radio" name="selectMehrwertsteuerAbzug" id="abzugBruttoNetto">
+                <input type="radio" name="checkbox" id="abzugBruttoNetto">
                 <label for="abzugBruttoNetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
             </div>
+        </div>
+            <div class="auswahl-feld">
             <div>
                 <h2>Mehrwertsteuersatz</h2>
             </div>
             <div>
-                <input type="radio" name="neunzehnProzentSteuersatz" id="neunzehnProzent" checked>
+                <input type="radio" name="checkboxTwo" id="neunzehnProzent" checked>
                 <label for="neunzehnProzent">19%</label><br>
             
-                <input type="radio" name="siebenProzentSteuersatz" id="siebenProzent">
+                <input type="radio" name="checkboxTwo" id="siebenProzent">
                 <label for="siebenProzent">7%</label>
             </div>
-            <div>
+            </div>
+            <div class="auswahl-feld">
                 <label for="inputBetrag">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span></label><br>
                 <input type="number" name="preisInEuro" id="inputBetrag" required><br>
-
-                <input type="submit" value="Berechnen">
             </div>
+            <div class="button-con">
+                <input type="button" value="Berechnen" id="calcBtn">
+            </div>
+        </article>
+        <article class="rechner-area-two">
             <div>
-            <p id="result">
-                <p>Ergebnis</p>
+                <h3>Ergebnis</h3>
             </p>
-            <div>
+            <div class="auswahl-feld">
                 <p>Mehrwertsteuerbetrag</p>
-                <div>
-                <p id="SteuerbetragInEuro">€</p>
-                <p id="output"></p>
+                <div class="output-container">
+                <p id="SteuerbetragInEuro">€ </p>
+                <p id="outputMehrwert"></p>
                 </div>
             </div>
-            <div>
+            <div class="auswahl-feld">
                 <p>Bruttobetrag (Endpreis)</p>
-                <div>
-                <p id="BruttobetragInEuro">€</p>
-                <p id="output"></p>
+                <div class="output-container">
+                <p id="BruttobetragInEuro">€ </p>
+                <p id="outputBrutto"></p>
                 </div>
             </div>
         </article>
