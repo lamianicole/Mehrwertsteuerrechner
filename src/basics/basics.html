@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>project-brutto-netto-rechner</title>
+</head>
+<body>
+    <section>
+    <h1>Mehrwertsteuer-Rechner</h1>
+    <article class="rechner-area">
+        <h2>Was soll berechnet werden?</h2>
+            <div>
+                <input type="radio" name="selectMehrwertsteuerAufschlag" id="aufschlagNettoBrutto" checked>
+                <label for="aufschlagNettoBrutto">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label><br>
+
+                <input type="radio" name="selectMehrwertsteuerAbzug" id="abzugBruttoNetto">
+                <label for="abzugBruttoNetto">Mehrwertsteuer abziehen (Brutto zu Netto)</label>
+            </div>
+            <div>
+                <h2>Mehrwertsteuersatz</h2>
+            </div>
+            <div>
+                <input type="radio" name="neunzehnProzentSteuersatz" id="neunzehnProzent" checked>
+                <label for="neunzehnProzent">19%</label><br>
+            
+                <input type="radio" name="siebenProzentSteuersatz" id="siebenProzent">
+                <label for="siebenProzent">7%</label>
+            </div>
+            <div>
+                <label for="inputBetrag">Nettobetrag (Preis ohne Mehrwertsteuer) in Euro<span>*</span></label><br>
+                <input type="number" name="preisInEuro" id="inputBetrag" required><br>
+
+                <input type="submit" value="Berechnen">
+            </div>
+            <div>
+            <p id="result">
+                <p>Ergebnis</p>
+            </p>
+            <div>
+                <p>Mehrwertsteuerbetrag</p>
+                <div>
+                <p id="SteuerbetragInEuro">€</p>
+                <p id="output"></p>
+                </div>
+            </div>
+            <div>
+                <p>Bruttobetrag (Endpreis)</p>
+                <div>
+                <p id="BruttobetragInEuro">€</p>
+                <p id="output"></p>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <script type="module" src="./basics.ts"></script>
+</body>
+</html>
